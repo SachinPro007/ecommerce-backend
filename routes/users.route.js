@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import { registerUser, loginUser, logoutUser, getCurrentUser, updateUserProfile } from '../controllers/users.controller.js';
-
+import { veryfyLoggedInUser } from '../middlewares/auth.middleware.js';
 
 
 const route = Router();

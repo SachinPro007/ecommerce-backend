@@ -1,6 +1,7 @@
 import { Router } from "express";
 
 import { getAllOrders, getOrderById, addNewOrder, updateOrderStatus } from "../controllers/orders.controller.js";
+import { veryfyLoggedInUser } from "../middlewares/auth.middleware.js";
 
 
 

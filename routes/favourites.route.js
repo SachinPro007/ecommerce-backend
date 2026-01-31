@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getAllFavourites, toggleToFavourite, getFavouriteById } from "../controllers/favourites.controller.js";
+import { veryfyLoggedInUser } from "../middlewares/auth.middleware.js";
 
 
 const router = Router();
