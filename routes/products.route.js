@@ -1,4 +1,7 @@
 import { Router } from "express";
+import { getAllProducts, getProductById, createProduct, updateProduct, deleteProduct } from "../controllers/products.controller.js";
+
+
 
 const router = Router();
 
@@ -7,9 +10,9 @@ router.get('/', getAllProducts);
 
 router.use(veryfyLoggedInUser); // Secure routes (only for sellers/admins)
 router.post('/', createProduct);
-router.get('/:id', getProductById);
-router.put('/:id', updateProduct);
-router.delete('/:id', deleteProduct);
+router.get('/:itemId', getProductById);
+router.put('/:itemId', updateProduct);
+router.delete('/:itemId', deleteProduct);
 
 
 

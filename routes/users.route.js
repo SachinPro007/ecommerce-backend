@@ -1,6 +1,10 @@
-import {Router} from 'express';
-const route = Router();
+import { Router } from 'express';
 
+import { registerUser, loginUser, logoutUser, getCurrentUser, updateUserProfile } from '../controllers/users.controller.js';
+
+
+
+const route = Router();
 // Defining user-related routes here
 
 route.post('/register', registerUser);
@@ -10,7 +14,7 @@ route.post('/login', loginUser);
 route.use(veryfyLoggedInUser);
 route.post("/logout", logoutUser);
 route.get("/current-user", getCurrentUser);
-route.put('/:id', updateUserProfile);
+route.put('/:userId', updateUserProfile);
 
 
 export default route;

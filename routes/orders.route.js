@@ -1,14 +1,18 @@
 import { Router } from "express";
-import route from "./users.route";
+
+import { getAllOrders, getOrderById, addNewOrder, updateOrderStatus } from "../controllers/orders.controller.js";
+
+
+
 const router = Router();
 
 // Defining order-related routes here
 router.use(veryfyLoggedInUser); // Secure routes (only for logged-in users)
 
-route.get('/', getAllOrders);
+router.get('/', getAllOrders);
 router.post('/', addNewOrder);
-router.get('/:id', getOrderById);
-router.put('/:id', updateOrderStatus);
+router.get('/:orderId', getOrderById);
+router.put('/:orderId', updateOrderStatus);
 
 
 export default router;
