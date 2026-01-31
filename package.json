@@ -5,12 +5,13 @@
   "license": "ISC",
   "author": "Sachin Sehrawat",
   "type": "module",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.1.5"
   },
