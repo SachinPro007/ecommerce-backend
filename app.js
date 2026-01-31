@@ -1,5 +1,7 @@
 import express from 'express';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
 
 app.use((req, res, next) => {
@@ -7,7 +9,4 @@ app.use((req, res, next) => {
 })
 
 
-const PORT = 8080
-app.listen(PORT, () => {
-  console.log("server runing on port ", PORT);  
-})
+export {app};
